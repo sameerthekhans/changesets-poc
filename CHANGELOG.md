@@ -1,5 +1,11 @@
 # Changesets POC
 
+## What's changed in version 1.5.0
+
+- add index 4
+
+- Hello, world 8!
+
 ## What's changed in version 1.4.0
 
 - add new index 3
