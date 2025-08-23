@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "changeset": "changeset",
-    "changeset:version": "changeset version"
+    "changeset:version": "changeset version && node custom-changelog.js"
   },
   "keywords": [],
   "author": "",
