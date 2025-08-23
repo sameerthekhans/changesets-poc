@@ -1,5 +1,11 @@
 # Changesets POC
 
+## What's changed in version 1.2.0
+
+- A new change
+
+- A new change - 5
+
 ## What's changed in version 1.1.0
 
 - f01929b: add new file index.js
