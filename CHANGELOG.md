@@ -1,5 +1,9 @@
 # Changesets POC
 
+## What's changed in version 1.3.0
+
+- Hello, world 6!
+
 ## What's changed in version 1.2.0
 
 - A new change
