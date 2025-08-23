@@ -1,5 +1,13 @@
 # Changesets POC
 
+## What's changed in version 1.4.0
+
+- add new index 3
+
+- add new index2.js
+
+- Hello, world 7!
+
 ## What's changed in version 1.3.0
 
 - Hello, world 6!
