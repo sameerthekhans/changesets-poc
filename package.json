@@ -1,0 +1,16 @@
+{
+  "name": "changesets-poc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "changesets": "changeset",
+    "version-packages": "changeset version"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@changesets/cli": "^2.29.6"
+  }
+}
