@@ -1,5 +1,9 @@
 # Changesets POC
 
+## What's changed in version 1.5.1
+
+- update index 4
+
 ## What's changed in version 1.5.0
 
 - add index 4
