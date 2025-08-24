@@ -39,7 +39,7 @@ jobs:
       - name: Push changes
         run: git push origin HEAD:refs/heads/main
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
 
   create-release:
     runs-on: ubuntu-latest
