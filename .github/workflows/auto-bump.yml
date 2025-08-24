@@ -34,8 +34,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "ci: apply changeset version" || echo "No changes to commit"
+          git commit -am "chore: bump version [skip ci]" || echo "No changes to commit"
 
       - name: Push changes
         run: git push origin HEAD:refs/heads/main
@@ -51,7 +50,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref_name }}
-          release_name: ${{ github.ref_name }}
+          tag_name: test-${{ github.run_number }}
+          release_name: Release ${{ github.run_number }}
           draft: false
           prerelease: false
