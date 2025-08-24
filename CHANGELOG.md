@@ -1,5 +1,9 @@
 # Changesets POC
 
+## What's changed in version 1.5.3
+
+- fix: something
+
 ## What's changed in version 1.5.2
 
 - fix workflow bugs
