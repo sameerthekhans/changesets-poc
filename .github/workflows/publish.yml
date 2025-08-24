@@ -2,7 +2,8 @@ name: Mimic Release Publish
 
 on:
   release:
-    types: [published]
+    types:
+      - published
 
 jobs:
   log-release-info:
