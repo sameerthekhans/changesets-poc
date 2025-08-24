@@ -1,0 +1,26 @@
+name: Mimic Release Publish
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  log-release-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Log package version
+        run: |
+          VERSION=$(jq -r .version package.json)
+          echo "Package version: $VERSION"
+
+      - name: Show changelog
+        run: |
+          if [ -f CHANGELOG.md ]; then
+            echo "Changelog:"
+            cat CHANGELOG.md
+          else
+            echo "No changelog found."
+          fi
