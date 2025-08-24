@@ -39,7 +39,7 @@ jobs:
       - name: Push changes
         run: git push origin HEAD:refs/heads/main
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   create-release:
     runs-on: ubuntu-latest
@@ -48,7 +48,7 @@ jobs:
       - name: Create GitHub Release
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
         with:
           tag_name: test-${{ github.run_number }}
           release_name: Release ${{ github.run_number }}
