@@ -1,5 +1,9 @@
 # Changesets POC
 
+## What's changed in version 1.6.0
+
+- new changes 3
+
 ## What's changed in version 1.5.4
 
 - This is a new changelog
