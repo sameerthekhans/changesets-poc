@@ -27,19 +27,19 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # - name: Apply Changeset version
-      #   run: npm run changeset:version
+      - name: Apply Changeset version
+        run: npm run changeset:version
 
-      # - name: Commit version bump
-      #   run: |
-      #     git config user.name "github-actions[bot]"
-      #     git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-      #     git commit -am "chore: bump version [skip ci]" || echo "No changes to commit"
+      - name: Commit version bump
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "chore: bump version [skip ci]" || echo "No changes to commit"
 
-      # - name: Push changes
-      #   run: git push origin HEAD:refs/heads/main
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push changes
+        run: git push origin HEAD:refs/heads/main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   create-release:
     runs-on: ubuntu-latest
