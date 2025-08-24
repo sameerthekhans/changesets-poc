@@ -1,5 +1,9 @@
 # Changesets POC
 
+## What's changed in version 1.5.2
+
+- fix workflow bugs
+
 ## What's changed in version 1.5.1
 
 - update index 4
