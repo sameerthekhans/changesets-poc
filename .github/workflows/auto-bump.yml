@@ -13,10 +13,19 @@ jobs:
   version:
     runs-on: ubuntu-latest
     steps:
+      - name: Create GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ secrets.CHANGESETS_BOT_APP_ID }}
+          private-key: ${{ secrets.CHANGESETS_BOT_PRIVATE_KEY }}
+
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ steps.app-token.outputs.token }}
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -29,13 +38,6 @@ jobs:
 
       - name: Apply Changeset version
         run: npm run changeset:version
-
-      - name: Create GitHub App token
-        id: app-token
-        uses: actions/create-github-app-token@v2
-        with:
-          app-id: ${{ secrets.CHANGESETS_BOT_APP_ID }}
-          private-key: ${{ secrets.CHANGESETS_BOT_PRIVATE_KEY }}
 
       - name: Get GitHub App User ID
         id: get-user-id
