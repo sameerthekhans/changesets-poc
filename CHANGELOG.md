@@ -1,5 +1,9 @@
 # Changesets POC
 
+## What's changed in version 1.8.0
+
+- new index5
+
 ## What's changed in version 1.7.0
 
 - feat: new changes 3
