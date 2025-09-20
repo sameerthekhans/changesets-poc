@@ -1,5 +1,9 @@
 # Changesets POC
 
+## What's changed in version 1.8.1
+
+- add new log 2
+
 ## What's changed in version 1.8.0
 
 - new index5
