@@ -12,6 +12,8 @@ permissions:
 jobs:
   version:
     runs-on: ubuntu-latest
+    outputs:
+      app_token: ${{ steps.app-token.outputs.token }}
     steps:
       - name: Create GitHub App token
         id: app-token
@@ -67,7 +69,7 @@ jobs:
       - name: Create GitHub Release
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ needs.version.outputs.app_token }}
         with:
           tag_name: test-${{ github.run_number }}
           release_name: Release ${{ github.run_number }}
